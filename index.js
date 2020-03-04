@@ -23,7 +23,9 @@ args.map(val => {
       console.log("\n\t∞∞ HASH (sha256):\t" + hash);
     }
     if (parsedJson["filename"] !== undefined) {
-      filename = path.basename(String(parsedJson["filename"]).trim());
+      filename = path
+        .basename(String(parsedJson["filename"]).trim())
+        .toUpperCase();
       console.log("\t∞∞ FILENAME:\t\t" + filename);
     }
   }
